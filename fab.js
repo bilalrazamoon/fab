@@ -1,5 +1,5 @@
 angular.module('fab-component', [])
-    .directive('fab', function fabButtonDirective($timeout) {
+    .directive('fab', function() {
         return {
             restrict: 'E',
             replace: true,
@@ -23,15 +23,12 @@ angular.module('fab-component', [])
             var targetEl = angular.element(document.getElementById(targetId));
             element.addClass('animated');
             var scroll = 0, max = 80, current = 0, prevScroll = 0;
-            function transform(v){
-            }
             targetEl.bind('scroll', function (e) {
                 scroll = window.ionic?e.detail.scrollTop:e.target.scrollTop;
                 current = scroll >= 0 ? Math.min(max, Math.max(0, current + scroll - prevScroll)) : 0;
                 window.requestAnimationFrame(function () {
                     element.css("transform","translate3d(0, " + current + "px, 0)");
                 });
-                //console.log("current",current,"prevScroll",prevScroll,"scroll",scroll);
                 prevScroll = scroll;
             });
         }
