@@ -1,7 +1,9 @@
 fab - Floating Action Button
-===================
+============================
 
 Android [floating action button](http://www.google.com/design/spec/components/buttons.html#buttons-floating-action-button) which reacts on scrolling events. Becomes visible when an attached target is scrolled up and invisible when scrolled down.
+
+## Demo
 
 [ionic-example](http://hafizbilal112.github.io/fab/ionic-example/)
 
@@ -12,12 +14,21 @@ Android [floating action button](http://www.google.com/design/spec/components/bu
 Include `fab.css` and `fab.js` after the rest of your Ionic or Angular Material includes. Then use the following AngularJS directives:
 
 ```html
-<fab target-id="scrollFabTarget">
-    <i class="icon ion ion-android-add"></i>
+<!-- scrollable element -->
+<div fab-scroll-container>
+</div>
+<!-- fab directive must be after scrollable element -->
+<fab>
+    ...
 </fab>
-<scrollable-div id="scrollFabTarget">
-</scrollable-div>
 ```
 
-###Note
-Values of attr "target-id" on fab directive and scrollable div attr "id" should be same.
+## Options
+
+disabled live displace (move) - default true - type boolean:
+
+```html
+<fab live-displace="false">
+    ...
+</fab>
+```
