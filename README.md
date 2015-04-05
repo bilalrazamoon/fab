@@ -5,9 +5,7 @@ Android [floating action button](http://www.google.com/design/spec/components/bu
 
 ## Demo
 
-[ionic-example](http://hafizbilal112.github.io/fab/ionic-example/)
-
-[angular-material-example](http://hafizbilal112.github.io/fab/ionic-example/)
+[see live](http://hafizbilal112.github.io/fab)
 
 ## Usage
 
