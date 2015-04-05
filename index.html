@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>FAB - Floating Action Button</title>
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://marvelapp.github.io/devices.css/assets/devices.min.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin: 0.5em auto;
+            padding: 0.8em 0;
+            font-size: 1.8em;
+            font-weight: 500;
+        }
+        .col-md-6:first-child{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        iframe {
+            height: 100%;
+            width: 290px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        pre{
+            white-space: pre-line;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+        .btn{
+            margin-bottom: 3em;
+        }
+        .images{
+            padding: 2em 0;
+            width: 100%;
+            text-align: center;
+        }
+        .images img{
+            width: 49%;
+            cursor: pointer;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>FAB - Floating Action Button</h1>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="marvel-device nexus5">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="volume"></div>
+                <div class="camera"></div>
+                <div class="screen" ng-init="frame='ionic'">
+                    <iframe ng-show="frame=='ionic'" src="ionic-example/index.html" frameborder="0"></iframe>
+                    <iframe ng-show="frame=='material'" src="angular-material-example/index.html" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <p>Android <a
+                    href="http://www.google.com/design/spec/components/buttons.html#buttons-floating-action-button">floating
+                action button</a>
+                which reacts on scrolling events. Becomes visible when an attached target is scrolled up and invisible
+                when scrolled down.</p>
+            <a class="btn btn-block btn-success" href="https://github.com/hafizbilal112/fab" target="_blank">View Documentation</a>
+            <h2>Example</h2>
+            <pre>
+                &lt;!-- scrollable element --&gt;
+                &lt;div fab-scroll-container&gt;
+                &lt;/div&gt;
+                &lt;!-- fab directive must be after scrollable element --&gt;
+                &lt;fab&gt;
+                    ...
+                &lt;/fab&gt;
+            </pre>
+            <h2>Example</h2>
+            <div class="images">
+                <img src="img/ionic.png" alt="Ionicframework" ng-click="frame='ionic'"/>
+                <img src="img/angular-material.png" alt="Angular Material" ng-click="frame='material'"/>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
