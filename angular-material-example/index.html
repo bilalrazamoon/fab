@@ -122,15 +122,12 @@
 </head>
 <body ng-app="demo">
 <div ng-controller="mainCtrl" layout="column">
-    <fab target-id="scrollFabTarget">
-        <md-icon md-svg-src="https://google.github.io/material-design-icons/content/svg/ic_add_24px.svg" class="s24" alt="Add"></md-icon>
-    </fab>
     <md-toolbar class="md-indigo">
         <div class="md-toolbar-tools">
             <h2 class="md-flex">Fab Directive</h2>
         </div>
     </md-toolbar>
-    <md-content id="scrollFabTarget" flex>
+    <md-content fab-scroll-container>
         <md-list>
             <md-item ng-repeat="item in todos">
                 <md-item-content>
@@ -148,6 +145,9 @@
             </md-item>
         </md-list>
     </md-content>
+    <fab>
+        <md-icon md-svg-src="https://google.github.io/material-design-icons/content/svg/ic_add_24px.svg" class="s24" alt="Add"></md-icon>
+    </fab>
 </div>
 </body>
 </html>
